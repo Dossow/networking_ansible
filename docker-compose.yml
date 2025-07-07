@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  ansible:
+    build: .
+    container_name: ansible-proyecto
+    volumes:
+      - .:/opt/ansible
+    working_dir: /opt/ansible
+    stdin_open: true
+    tty: true
+    command: sleep infinity
