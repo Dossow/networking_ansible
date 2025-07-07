@@ -136,3 +136,17 @@ line vty 0 4
     └── gre_tunnel
         └── tasks
             └── main.yml
+
+
+
+inventory/ hosts.yml
+all:
+  children:
+    cisco:
+      hosts:
+        R1:
+          ansible_host: 10.0.1.1
+        R2:
+          ansible_host: 10.0.2.1
+        R3:
+          ansible_host: 10.0.3.1
